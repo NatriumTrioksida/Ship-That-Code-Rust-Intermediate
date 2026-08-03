@@ -1,0 +1,46 @@
+{
+  "course": "rust-intermediate",
+  "language": "rust",
+  "language_id": 73,
+  "entrypoint": "main.rs",
+  "version": 1,
+  "content_hash": "b92968e5531da3d0",
+  "lessons": [
+    {
+      "slug": "borrowing",
+      "tests_hash": "25214ef16b0c"
+    },
+    {
+      "slug": "lifetimes",
+      "tests_hash": "4cea96c4e4ce"
+    },
+    {
+      "slug": "traits",
+      "tests_hash": "b955187974d6"
+    },
+    {
+      "slug": "iterators",
+      "tests_hash": "2ef2107d7b83"
+    },
+    {
+      "slug": "result-option",
+      "tests_hash": "c7c3ad784eef"
+    },
+    {
+      "slug": "smart-pointers",
+      "tests_hash": "dd1e6d3cd281"
+    },
+    {
+      "slug": "closures",
+      "tests_hash": "76d14ce435e5"
+    },
+    {
+      "slug": "modules",
+      "tests_hash": "b955187974d6"
+    },
+    {
+      "slug": "threads",
+      "tests_hash": "831e535aa6cf"
+    }
+  ]
+}
