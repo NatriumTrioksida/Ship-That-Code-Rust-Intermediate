@@ -1,19 +1,13 @@
-use std::io::{self, BufRead};
-
-fn parse_two(a: &str, b: &str) -> Result<i32, std::num::ParseIntError> {
-    let x = a.parse::<i32>()?;
-    let y = b.parse::<i32>()?;
-    Ok(x + y)
-    // a.parse::<i32>() // placeholder
-}
+use std::cell::RefCell;
+use std::rc::Rc;
 
 fn main() {
-    let stdin = io::stdin();
-    let mut lines = stdin.lock().lines();
-    let a = lines.next().unwrap().unwrap();
-    let b = lines.next().unwrap().unwrap();
-    match parse_two(&a, &b) {
-        Ok(n) => println!("sum: {}", n),
-        Err(_) => println!("error: invalid input"),
-    }
+    let counter = Rc::new(RefCell::new(0));
+    let a = Rc::clone(&counter);
+    let b = Rc::clone(&counter);
+
+    *a.borrow_mut() += 1;
+    *b.borrow_mut() += 1;
+
+    println!("{}", counter.borrow());
 }
